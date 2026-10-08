@@ -9,23 +9,7 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="/index.php" class="brand">
-        <span class="logo-badge">PD</span>
-        Perpustakaan Digital
-      </a>
-      <div class="nav-links">
-        <a href="/index.php" class="active">Beranda</a>
-        <a href="/pages/books/index.php">Katalog Buku</a>
-        <a href="/pages/authors/index.php">Penulis</a>
-      </div>
-      <div class="nav-actions">
-        <a href="/pages/auth/login.php" class="btn btn-outline btn-sm">Masuk</a>
-        <a href="/pages/auth/register.php" class="btn btn-primary btn-sm">Daftar</a>
-      </div>
-    </nav>
-  </header>
+  
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -112,10 +96,7 @@
       </div>
     </div>
   </section>
-  <footer class="site-footer">
-    <span>&copy; 2026 Perpustakaan Digital - SMK Kristen Immanuel Pontianak</span>
-    <span>Dibangun dengan HTML, CSS &amp; PHP</span>
-  </footer>
+
 </body>
 
 </html>
