@@ -3,6 +3,9 @@ $pageTitle = 'Tambah Pengguna';
 $pageSubtitle = 'Buat akun pengguna baru beserta perannya';
 ?>
 
+require_once __DIR__ . '/../../repositories/user-repository.php';
+$user = getUser();
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,14 +15,7 @@ $pageSubtitle = 'Buat akun pengguna baru beserta perannya';
   <link rel="stylesheet" href="../../styles/users/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 2,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
-  ?>
+  
   <div class="app-shell">
 
     <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
