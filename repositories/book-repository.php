@@ -1,4 +1,5 @@
 <?php
+function getBooks() {
 
 $books = [
   [
@@ -42,6 +43,9 @@ $books = [
     "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
   ],
 ];
+
+return $books;
+}
 
 $book = [
   "id" => 5,

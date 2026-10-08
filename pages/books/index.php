@@ -3,6 +3,9 @@ $pageTitle = 'Manajemen Buku';
 $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
 ?>
 
+require_once __DIR__ . '/../../repositories/book-repository.php';
+$books = getBooks();
+
 <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
 <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
 
@@ -17,16 +20,7 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
 </head>
 
 <body>
-  <?php
-  $book = [
-    "id" => 1,
-    "title" => "Laskar Pelangi",
-    "category" => "Fiksi",
-    "year" => 2005,
-    "stock" => 12,
-    "authors" => "Andrea Hirata",
-  ];
-  ?>
+
   <div class="app-shell">
     
 
@@ -59,6 +53,10 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
         <div class="data-card">
           <table class="data-table">
             <thead>
+
+               <tbody> 
+               <?php foreach ($books as $index => $book) : ?>
+
               <tr>
                 <th>Judul Buku</th>
                 <th>Kategori</th>
@@ -71,7 +69,11 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
               <tr>
                 <td>
                   <div class="cell-primary">
-                    <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   
+                     <?php foreach ($book['authors'] as $author) : ?>
+                     <span class="chip"><?= $author ?></span>
+                     <?php endforeach ?>
+
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
@@ -93,6 +95,14 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
                   </div>
                 </td>
               </tr>
+
+              <?php endforeach ?>
+              <?php if (count($books) < 1) : ?>
+                <tr>
+                  <td style="text-align: center;" colspan="5">Tidak ada data buku yang tersedia.</td>
+                </tr>
+              <?php endif ?>
+
             </tbody>
           </table>
         </div>
