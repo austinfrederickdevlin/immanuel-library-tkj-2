@@ -20,6 +20,7 @@
         cepat, dan mudah diakses kapan saja.</p>
       <div class="hero-cta">
         <a href="pages/auth/login.php" class="btn btn-primary">Masuk ke Akun</a>
+        <a href="pages/auth/register.php" class="btn btn-outline">Daftar Akun</a>
         <a href="pages/books/index.php" class="btn btn-outline">Lihat Katalog Buku</a>
       </div>
     </div>
