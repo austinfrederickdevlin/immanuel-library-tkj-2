@@ -1,3 +1,11 @@
+<?php
+$pageTitle = 'Manajemen Buku';
+$pageSubtitle = 'Kelola data buku, kategori, dan penulis';
+?>
+
+<?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
+<?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+
 <!DOCTYPE html>
 <html lang="id">
 
