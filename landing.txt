@@ -1,0 +1,8 @@
+1. Apa keuntungan memisahkan header dan footer menjadi file component tersendiri, dibandingkan menuliskannya langsung berulang-ulang di index.php?
+
+Memisahkan header dan footer menjadi component membuat kode lebih rapi dan mudah dikelola. Header dan footer cukup dibuat satu kali sehingga tidak perlu menulis kode yang sama berulang-ulang. Jika ada perubahan pada header atau footer, cukup mengubah file component-nya saja. Cara ini juga membuat struktur halaman lebih terorganisir dan mudah digunakan kembali.
+
+
+2. Perhatikan halaman-halaman admin (Buku, Kategori, Penulis, Pengguna, Profil) pada Bagian 2 - bagian mana pada halaman-halaman tersebut yang mengalami masalah yang sama seperti header/footer sebelum dipisah?
+
+Bagian yang mengalami masalah yang sama adalah sidebar dan topbar admin. Jika ditulis langsung pada setiap halaman, kode sidebar dan topbar akan berulang pada halaman Buku, Kategori, Penulis, Pengguna, dan Profil. Hal ini membuat kode menjadi lebih panjang dan sulit dikelola jika ada perubahan. Karena itu, sidebar dan topbar sebaiknya dipisahkan menjadi component yang dapat digunakan kembali.
