@@ -1,26 +1,34 @@
 <?php
-
-require_once __DIR__ . "/../../config/database.php";
+ 
+require_once __DIR__ . "/../config/database.php";
+ 
 function getCategories()
 {
-  global $pdo;
-
-  $query = "select * from categories";
-  $stmt = $pdo->prepare($query);
-  $stmt->execute();
-
-  $categories = $stmt->fetchAll();
-
-  return $categories;
+    global $pdo;
+ 
+    $query = "select
+                categories.*,
+                (select count(*)
+                 from books
+                 where books.category_id = categories.id) as total_books
+              from categories";
+ 
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+ 
+    $categories = $stmt->fetchAll();
+ 
+    return $categories;
 }
-
+ 
 function getCategory()
 {
-  $category = [
-    "id"          => 1,
-    "name"        => "Fiksi",
-    "description" => "Novel dan cerita rekaan",
-  ];
-
-  return $category;
+    $category = [
+        "id" => 1,
+        "name" => "Fiksi",
+        "description" => "Novel dan cerita rekaan",
+    ];
+ 
+    return $category;
 }
+ 

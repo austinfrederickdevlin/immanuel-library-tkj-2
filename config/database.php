@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$dbname = "immanuel_library";
+$dbname = "immanuel_library_2";
 $username = "root";
 $password = "";
 

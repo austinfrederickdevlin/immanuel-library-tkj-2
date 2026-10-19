@@ -1,12 +1,12 @@
 <?php
 require_once __DIR__ . "/../../repositories/category-repository.php";
-
+ 
 $categories = getCategories();
-
+ 
 $pageTitle = "Manajemen Kategori";
 $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -18,10 +18,10 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
 <body>
   <div class="app-shell">
   <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
-
+ 
     <main class="app-main">
     <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
-
+ 
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">
@@ -33,7 +33,7 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
           </form>
           <a href="create.php" class="btn btn-primary">+ Tambah Kategori</a>
         </div>
-
+ 
         <div class="data-card">
           <table class="data-table">
             <thead>
@@ -67,7 +67,7 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
             </tbody>
           </table>
         </div>
-
+ 
         <div class="pagination">
           <span class="pagination-btn is-disabled">&lt;</span>
           <span class="pagination-btn is-disabled">&gt;</span>
@@ -77,3 +77,4 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
   </div>
 </body>
 </html>
+ 
