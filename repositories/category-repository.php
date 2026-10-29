@@ -21,14 +21,14 @@ function getCategories()
     return $categories;
 }
  
-function getCategory()
+function isCategoryExists($categoryId)
 {
-    $category = [
-        "id" => 1,
-        "name" => "Fiksi",
-        "description" => "Novel dan cerita rekaan",
-    ];
- 
-    return $category;
+  global $pdo;
+  $query = "select count(id) from categories where id = :category_id";
+  $stmt = $pdo->prepare($query);
+  $stmt->execute(["category_id"=> $categoryId]);
+
+  $isCategoryExists = $stmt->fetchColumn() > 0;
+  return $isCategoryExists;
 }
  

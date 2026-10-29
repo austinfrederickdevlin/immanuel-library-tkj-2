@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/../../repositories/user-repository.php";
-
+session_start();
 $user = getUser();
 $profile = getProfile();
 

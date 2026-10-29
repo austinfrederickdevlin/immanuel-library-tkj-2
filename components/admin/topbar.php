@@ -1,3 +1,7 @@
+<?php
+
+$user = $_SESSION['user']
+?>
 <header class="app-topbar">
   <div class="page-title">
     <h1><?= $pageTitle ?></h1>
@@ -8,6 +12,10 @@
     <div>
       Budi Santoso<br>
       <span class="badge badge-member" style="margin-top:2px;">Member</span>
+      <?= $user['name'] ?? 'Guest'?><br>
+      <span class="badge badge-member" style="margin-top:2px;">
+        <?=$user['role'] == 'member' ? 'Member' : 'Admin'?>
+      </span>
     </div>
   </div>
 </header>
