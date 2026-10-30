@@ -27,12 +27,6 @@ if (isset($_POST['store']) && $_SERVER['REQUEST_METHOD'] === "POST") {
         values (:title, :isbn, :year, :stock, :description, :category_id)";
         $stmt = $pdo->prepare($query);
         $stmt->execute([
-            'title' => $title,
-            'isbn' => $isbn,
-            'year' => $year,
-            'stock' => $stock,
-            'description' => $description,
-            'category_id' => $categoryId
             'title' => $request['title'],
             'isbn' => $request['isbn'],
             'year' => $request['year'],

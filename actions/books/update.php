@@ -27,14 +27,7 @@ if (isset($_POST['update']) && $_SERVER['REQUEST_METHOD'] === "POST") {
                   year = :year, stock = :stock, category_id = :category_id,
                   description = :description where id = :id";
         $stmt = $pdo->prepare($query);
-        $stmt->execute([
-            'title' => $title,
-            'isbn' => $isbn,
-            'year' => $year,
-            'stock' => $stock,
-            'category_id' => $categoryId,
-            'description' => $description,
-            'id' => $id            
+        $stmt->execute([      
             'title' => $request['title'],
             'isbn' => $request['isbn'],
             'year' => $request['year'],
